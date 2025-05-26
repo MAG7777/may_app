@@ -1,10 +1,11 @@
+import SignUpForm from "../SignUpForm/SIgnUpForm";
 import "./Home.css";
 
 const Home = () => {
 
     return (
         <>
-            <h1>Home</h1>
+        <SignUpForm />
         </>
     )
 }

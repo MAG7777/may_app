@@ -1,10 +1,11 @@
-import "./Home.css";
+import { ModalPage } from "../Modal/ModalPage";
+// import "./Home.css";
 
 const Home = () => {
 
     return (
         <>
-            <h1>Home</h1>
+         <ModalPage />
         </>
     )
 }

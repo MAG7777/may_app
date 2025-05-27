@@ -1,10 +1,11 @@
+import { EnhancedComponent1 } from "../../components/EnhancedComponent";
 import "./Home.css";
 
 const Home = () => {
 
     return (
         <>
-            <h1>Home</h1>
+            <EnhancedComponent1 />
         </>
     )
 }

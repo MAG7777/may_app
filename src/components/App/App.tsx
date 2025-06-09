@@ -1,6 +1,6 @@
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import Home from '../../pages/Home/Home';
+import { DataFetch } from '../DataFetch';
 import './App.css';
 
 function App() {
@@ -9,7 +9,7 @@ function App() {
     <>
       <main className='app'>
         <Header />
-        <Home />
+        <DataFetch />
         <Footer />
       </main>
 

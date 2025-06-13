@@ -1,19 +1,16 @@
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Home from '../../pages/Home/Home';
-import './App.css';
+import NumberTracker from "../NumberTracker"
+// import { RefComponent } from "../RefComponent"
+// import { RefComponentEffect } from "../RefComponentEffect"
+import CustomVideoPlayer from "../CustomVideoPlayer"
 
 function App() {
 
-  return (
-    <>
-      <main className='app'>
-        <Header />
-        <Home />
-        <Footer />
-      </main>
 
-    </>
+  return (
+    // <RefComponent />
+    // <RefComponentEffect />
+    // <NumberTracker />
+    <CustomVideoPlayer />
   )
 }
 

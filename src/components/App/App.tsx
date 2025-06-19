@@ -1,19 +1,23 @@
 import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Home from '../../pages/Home/Home';
 import './App.css';
+import { UserContext } from '../../Contexts/UserContext';
+type User = {
+    id?:number,
+    name:string,
+    email:string
+}
 
 function App() {
 
-  return (
-    <>
-      <main className='app'>
-        <Header />
-        <Home />
-        <Footer />
-      </main>
+  const user:User = {
+    name:"Armadon",
+    email:"armadon@mail.com"
+  }
 
-    </>
+  return (
+    <UserContext value={user}>
+        <Header />
+    </UserContext>
   )
 }
 

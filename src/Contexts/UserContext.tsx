@@ -1,15 +1,23 @@
 import { createContext, useContext } from "react";
-type User = {
-    id?:number,
-    name:string,
-    email:string
-}
-export const UserContext = createContext<User|null>(null);
+export type User = {
+    id?: number;
+    name: string;
+    email: string;
+};
 
-export function useUserContext(){
+type UserContextType = {
+    user: User;
+    updateUser: (newUser: User) => void;
+};
+export const UserContext = createContext<UserContextType>({
+    user: { name: "", email: "" },
+    updateUser: () => { }
+});
+
+export function useUserContext() {
     const user = useContext(UserContext);
 
-    if(!user){
+    if (!user) {
         throw new Error("Info did not receve")
     }
 

@@ -1,20 +1,25 @@
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Home from '../../pages/Home/Home';
-import './App.css';
+import Setting from "../../components/Settings";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 
-function App() {
+const App = () => {
+  const [name, handleSetName, handleRemoveName] = useLocalStorage(
+    "name",
+    "Guest"
+  );
 
   return (
-    <>
-      <main className='app'>
-        <Header />
-        <Home />
-        <Footer />
-      </main>
+    <div>
+      <h1>Hello, {name}!</h1>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => handleSetName(e.target.value)}
+        placeholder="Enter your name"
+      />
+      <button onClick={handleRemoveName}>Clear name</button>
+      <Setting />
+    </div>
+  );
+};
 
-    </>
-  )
-}
-
-export default App
+export default App;

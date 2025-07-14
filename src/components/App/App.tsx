@@ -1,18 +1,15 @@
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import Home from '../../pages/Home/Home';
 import './App.css';
+import UserList from '../UserList';
+import AddUser from '../AddUser';
 
 function App() {
 
   return (
     <>
-      <main className='app'>
-        <Header />
-        <Home />
-        <Footer />
-      </main>
-
+      <UserList />
+      <p>...................................................</p>
+      <AddUser />
+      <p>...................................................</p>
     </>
   )
 }
